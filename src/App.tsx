@@ -5,9 +5,25 @@ import { DivinationPage } from './pages/DivinationPage';
 import { LearnPage } from './pages/LearnPage';
 import { HistoryPage } from './pages/HistoryPage';
 import { ThemeToggle } from './components/ThemeToggle';
-import { ThemeProvider } from './hooks/useTheme';
+import { ThemeProvider, useTheme } from './hooks/useTheme';
 
 const pageOrder = ['home', 'divination', 'learn', 'history'];
+
+const Footer = () => {
+  const { theme } = useTheme();
+  const textSecondaryColor = theme === 'light' ? '#86868b' : 'rgba(255, 255, 255, 0.6)';
+  const borderColor = theme === 'light' ? 'rgba(0, 0, 0, 0.06)' : 'rgba(255, 255, 255, 0.1)';
+
+  return (
+    <footer className="py-8 border-t" style={{ borderColor }}>
+      <div className="max-w-4xl mx-auto px-4 text-center">
+        <p className="text-sm" style={{ color: textSecondaryColor }}>
+          by <span className="font-semibold">zhomg</span>
+        </p>
+      </div>
+    </footer>
+  );
+};
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -36,12 +52,12 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="min-h-screen">
+      <div className="min-h-screen flex flex-col">
         <ThemeToggle />
         <div className="fixed top-0 left-0 right-0 z-20">
           <Navigation currentPage={currentPage} onNavigate={handleNavigate} />
         </div>
-        <div className="pt-24">
+        <div className="pt-24 flex-grow">
           <div className="overflow-hidden">
             <div
               className="flex transition-transform duration-700 ease-out"
@@ -57,6 +73,7 @@ function App() {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </ThemeProvider>
   );

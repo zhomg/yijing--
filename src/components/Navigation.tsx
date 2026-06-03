@@ -33,37 +33,52 @@ export const Navigation = ({ currentPage, onNavigate }: NavigationProps) => {
       }}
     >
       <div className="max-w-4xl mx-auto">
-        <div className="flex justify-center gap-1.5">
-          {navItems.map((item) => {
-            const Icon = item.icon;
-            const isActive = currentPage === item.id;
-            return (
-              <button
-                key={item.id}
-                onClick={() => onNavigate(item.id)}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all duration-200"
-                style={{
-                  backgroundColor: isActive ? activeBg : 'transparent',
-                  color: isActive ? activeColor : inactiveColor
-                }}
-                onMouseEnter={(e) => {
-                  if (!isActive) {
-                    e.currentTarget.style.backgroundColor = hoverBg;
-                    e.currentTarget.style.color = textColor;
-                  }
-                }}
-                onMouseLeave={(e) => {
-                  if (!isActive) {
-                    e.currentTarget.style.backgroundColor = 'transparent';
-                    e.currentTarget.style.color = inactiveColor;
-                  }
-                }}
-              >
-                <Icon className="w-3.5 h-3.5" />
-                <span className="font-medium text-xs">{item.label}</span>
-              </button>
-            );
-          })}
+        <div className="flex items-center justify-between">
+          {/* Brand */}
+          <div 
+            className="font-bold text-sm tracking-tight cursor-pointer"
+            style={{ color: textColor }}
+            onClick={() => onNavigate('home')}
+          >
+            zhomg
+          </div>
+          
+          {/* Navigation */}
+          <div className="flex gap-1.5">
+            {navItems.map((item) => {
+              const Icon = item.icon;
+              const isActive = currentPage === item.id;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => onNavigate(item.id)}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all duration-200"
+                  style={{
+                    backgroundColor: isActive ? activeBg : 'transparent',
+                    color: isActive ? activeColor : inactiveColor
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!isActive) {
+                      e.currentTarget.style.backgroundColor = hoverBg;
+                      e.currentTarget.style.color = textColor;
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isActive) {
+                      e.currentTarget.style.backgroundColor = 'transparent';
+                      e.currentTarget.style.color = inactiveColor;
+                    }
+                  }}
+                >
+                  <Icon className="w-3.5 h-3.5" />
+                  <span className="font-medium text-xs">{item.label}</span>
+                </button>
+              );
+            })}
+          </div>
+          
+          {/* Spacer for balance */}
+          <div className="w-12"></div>
         </div>
       </div>
     </nav>
