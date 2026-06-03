@@ -24,7 +24,7 @@ export const HomePage = ({ onNavigate }: HomePageProps) => {
   const taijiPathFill = theme === 'light' ? '#ffffff' : '#1a1a2e';
 
   return (
-    <div className="relative py-12">
+    <div className="relative py-8">
       <BackgroundPattern />
       
       {/* Hero Section - Full Viewport Height */}
@@ -123,7 +123,7 @@ export const HomePage = ({ onNavigate }: HomePageProps) => {
       
       {/* Features Section - Only show before divination */}
       {!currentResult && !isDivining && (
-        <section className="py-16 mt-12 border-t relative z-10" style={{ borderColor: borderColor }}>
+        <section className="py-12 mt-8 border-t relative z-10" style={{ borderColor: borderColor }}>
           <div>
             <div className="grid md:grid-cols-3 gap-10">
               <button
