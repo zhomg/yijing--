@@ -6,7 +6,7 @@ interface DivinationButtonProps {
   text?: string;
 }
 
-export const DivinationButton = ({ onClick, isLoading, text = "每日一卦" }: DivinationButtonProps) => {
+export const DivinationButton = ({ onClick, isLoading, text = "起卦" }: DivinationButtonProps) => {
   return (
     <button
       onClick={onClick}
