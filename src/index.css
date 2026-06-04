@@ -183,8 +183,12 @@ body {
   opacity: 0.03;
 }
 
+[data-theme="dark"] .pattern-element {
+  opacity: 0.15;
+}
+
 [data-theme="dark"] .bg-pattern {
-  opacity: 0.25;
+  opacity: 1;
 }
 
 @keyframes taiji-spin {
