@@ -180,7 +180,7 @@ body {
 
 .pattern-element {
   position: absolute;
-  opacity: 0.03;
+  opacity: 0.08;
 }
 
 [data-theme="dark"] .pattern-element {
