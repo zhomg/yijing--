@@ -86,6 +86,16 @@ export const HomePage = ({ onNavigate }: HomePageProps) => {
           {/* Result State - After Divination */}
           {currentResult && !isDivining && (
             <div className="space-y-10 animate-fade-in">
+              {/* Back Button */}
+              <div className="flex justify-start">
+                <button
+                  onClick={clearResult}
+                  className="btn-secondary p-3 rounded-xl transition-all duration-200 flex items-center justify-center"
+                >
+                  <ArrowLeft className="w-5 h-5" />
+                </button>
+              </div>
+              
               {/* Result Content */}
               <div className="grid md:grid-cols-2 gap-10 items-start">
                 <HexagramDisplay hexagram={currentResult.hexagram} />
@@ -102,29 +112,19 @@ export const HomePage = ({ onNavigate }: HomePageProps) => {
               <ResultDetail hexagram={currentResult.hexagram} />
               
               {/* Actions */}
-              <div className="space-y-4 pt-4">
-                <div className="flex justify-start">
-                  <button
-                    onClick={clearResult}
-                    className="btn-secondary p-3 rounded-xl transition-all duration-200 flex items-center justify-center"
-                  >
-                    <ArrowLeft className="w-5 h-5" />
-                  </button>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button
-                    onClick={startDivination}
-                    className="btn-primary px-8 py-3.5 text-base font-medium"
-                  >
-                    再卜一卦
-                  </button>
-                  <button
-                    onClick={clearResult}
-                    className="btn-secondary px-8 py-3.5 text-base font-medium"
-                  >
-                    回到首页
-                  </button>
-                </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                <button
+                  onClick={startDivination}
+                  className="btn-primary px-8 py-3.5 text-base font-medium"
+                >
+                  再卜一卦
+                </button>
+                <button
+                  onClick={clearResult}
+                  className="btn-secondary px-8 py-3.5 text-base font-medium"
+                >
+                  回到首页
+                </button>
               </div>
             </div>
           )}
