@@ -9,7 +9,7 @@ export const BackgroundPattern = () => {
 
   return (
     <div className="bg-pattern">
-      {/* 装饰性八卦元素 */}
+      {/* 装饰性八卦元素 - 两种模式共用 */}
       <div className="pattern-element" style={{ top: '10%', left: '5%', fontSize: '120px' }}>
         ☯
       </div>
@@ -29,9 +29,10 @@ export const BackgroundPattern = () => {
         ☶
       </div>
       
-      {/* 黑夜模式额外添加的八卦元素 */}
+      {/* 黑夜模式丰富的八卦元素 */}
       {isDark && (
         <>
+          {/* 更多八卦 */}
           <div className="pattern-element" style={{ top: '5%', right: '25%', fontSize: '65px' }}>
             ☲
           </div>
@@ -50,10 +51,60 @@ export const BackgroundPattern = () => {
           <div className="pattern-element" style={{ top: '55%', left: '40%', fontSize: '50px' }}>
             ☷
           </div>
+          <div className="pattern-element" style={{ top: '80%', right: '15%', fontSize: '60px' }}>
+            ☴
+          </div>
+          <div className="pattern-element" style={{ top: '15%', left: '50%', fontSize: '45px' }}>
+            ☲
+          </div>
+          <div className="pattern-element" style={{ bottom: '60%', left: '15%', fontSize: '70px' }}>
+            ☶
+          </div>
+          <div className="pattern-element" style={{ top: '50%', right: '40%', fontSize: '55px' }}>
+            ☰
+          </div>
+          <div className="pattern-element" style={{ bottom: '20%', left: '45%', fontSize: '65px' }}>
+            ☳
+          </div>
+          <div className="pattern-element" style={{ top: '30%', right: '50%', fontSize: '50px' }}>
+            ☵
+          </div>
+          
+          {/* 星光/闪烁点 */}
+          <div className="pattern-element" style={{ top: '12%', left: '35%', fontSize: '20px' }}>
+            ✦
+          </div>
+          <div className="pattern-element" style={{ top: '40%', left: '55%', fontSize: '25px' }}>
+            ✧
+          </div>
+          <div className="pattern-element" style={{ top: '65%', right: '25%', fontSize: '18px' }}>
+            ✦
+          </div>
+          <div className="pattern-element" style={{ bottom: '35%', left: '55%', fontSize: '22px' }}>
+            ✧
+          </div>
+          <div className="pattern-element" style={{ top: '85%', right: '45%', fontSize: '20px' }}>
+            ✦
+          </div>
+          <div className="pattern-element" style={{ top: '20%', right: '60%', fontSize: '24px' }}>
+            ✧
+          </div>
+          <div className="pattern-element" style={{ bottom: '70%', left: '60%', fontSize: '19px' }}>
+            ✦
+          </div>
+          <div className="pattern-element" style={{ top: '75%', left: '5%', fontSize: '21px' }}>
+            ✧
+          </div>
+          <div className="pattern-element" style={{ top: '45%', right: '60%', fontSize: '23px' }}>
+            ✦
+          </div>
+          <div className="pattern-element" style={{ bottom: '10%', right: '55%', fontSize: '17px' }}>
+            ✧
+          </div>
         </>
       )}
       
-      {/* 微妙的圆形装饰 */}
+      {/* 微妙的圆形装饰 - 两种模式共用 */}
       <div 
         className="pattern-element"
         style={{
@@ -77,9 +128,10 @@ export const BackgroundPattern = () => {
         }}
       />
       
-      {/* 黑夜模式额外的装饰 */}
+      {/* 黑夜模式超丰富的装饰元素 */}
       {isDark && (
         <>
+          {/* 圆形装饰 */}
           <div 
             className="pattern-element"
             style={{
@@ -111,6 +163,98 @@ export const BackgroundPattern = () => {
               height: '180px',
               border: `1px solid rgba(245, 158, 11, 0.2)`,
               borderRadius: '50%',
+            }}
+          />
+          <div 
+            className="pattern-element"
+            style={{
+              top: '75%',
+              right: '55%',
+              width: '100px',
+              height: '100px',
+              border: `1px solid rgba(255, 255, 255, 0.15)`,
+              borderRadius: '50%',
+            }}
+          />
+          <div 
+            className="pattern-element"
+            style={{
+              top: '5%',
+              right: '5%',
+              width: '140px',
+              height: '140px',
+              border: `1px solid rgba(245, 158, 11, 0.25)`,
+              borderRadius: '50%',
+            }}
+          />
+          <div 
+            className="pattern-element"
+            style={{
+              bottom: '65%',
+              left: '35%',
+              width: '90px',
+              height: '90px',
+              border: `1px solid rgba(255, 255, 255, 0.18)`,
+              borderRadius: '50%',
+            }}
+          />
+          
+          {/* 六边形装饰 */}
+          <div 
+            className="pattern-element"
+            style={{
+              top: '50%',
+              right: '45%',
+              width: '70px',
+              height: '70px',
+              border: `1px solid rgba(245, 158, 11, 0.25)`,
+              clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
+            }}
+          />
+          <div 
+            className="pattern-element"
+            style={{
+              bottom: '55%',
+              right: '10%',
+              width: '60px',
+              height: '60px',
+              border: `1px solid rgba(255, 255, 255, 0.15)`,
+              clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
+            }}
+          />
+          <div 
+            className="pattern-element"
+            style={{
+              top: '60%',
+              left: '60%',
+              width: '55px',
+              height: '55px',
+              border: `1px solid rgba(245, 158, 11, 0.2)`,
+              clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
+            }}
+          />
+          
+          {/* 菱形装饰 */}
+          <div 
+            className="pattern-element"
+            style={{
+              top: '30%',
+              left: '65%',
+              width: '45px',
+              height: '45px',
+              border: `1px solid rgba(255, 255, 255, 0.2)`,
+              transform: 'rotate(45deg)',
+            }}
+          />
+          <div 
+            className="pattern-element"
+            style={{
+              bottom: '25%',
+              left: '65%',
+              width: '40px',
+              height: '40px',
+              border: `1px solid rgba(245, 158, 11, 0.25)`,
+              transform: 'rotate(45deg)',
             }}
           />
         </>
