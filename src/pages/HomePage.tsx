@@ -50,10 +50,10 @@ export const HomePage = ({ onNavigate }: HomePageProps) => {
               {/* Headline */}
               <div className="space-y-5">
                 <h1 className="text-4xl md:text-5xl font-semibold tracking-tight" style={{ color: textColor }}>
-                  每日一卦
+                  起卦
                 </h1>
                 <p className="text-lg md:text-xl max-w-xl mx-auto leading-relaxed" style={{ color: textSecondaryColor }}>
-                  探索六十四卦的古老智慧，为您的日常指引方向
+                  观天之道，执天之行，尽矣
                 </p>
               </div>
               
