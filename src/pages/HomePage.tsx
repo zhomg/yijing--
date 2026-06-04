@@ -35,7 +35,7 @@ export const HomePage = ({ onNavigate }: HomePageProps) => {
             <div className="text-center space-y-12">
               {/* Taiji Logo */}
               <div className="flex justify-center">
-                <div className="w-28 h-28 animate-float">
+                <div className="w-28 h-28 animate-taiji-spin">
                   <svg viewBox="0 0 24 24" className="w-full h-full">
                     <circle cx="12" cy="12" r="10" fill={taijiFill} />
                     <path d="M12 2a10 10 0 0 1 0 20 5 5 0 0 1 0-10 5 5 0 0 0 0-10" fill={taijiPathFill} />
