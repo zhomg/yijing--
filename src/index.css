@@ -184,7 +184,7 @@ body {
 }
 
 [data-theme="dark"] .bg-pattern {
-  opacity: 0.15;
+  opacity: 0.25;
 }
 
 @keyframes taiji-spin {
